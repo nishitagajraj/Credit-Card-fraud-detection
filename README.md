@@ -4,6 +4,22 @@
 
 ---
 
+## 📸 Screenshots
+
+### 🔍 Predict Transaction
+![Predict](Screenshot%202026-03-08%20124310.png)
+
+### 📊 Model Performance - Confusion Matrices
+![Confusion Matrices](Screenshot%202026-03-08%20124500.png)
+
+### 📊 Model Performance - Amount Distribution
+![Amount Distribution](Screenshot%202026-03-08%20124518.png)
+
+### ℹ️ About
+![About](Screenshot%202026-03-08%20124542.png)
+
+---
+
 ## 📌 Problem Statement
 Credit card fraud causes billions in losses annually. This project builds an end-to-end ML pipeline to detect fraudulent transactions using the Kaggle Credit Card Fraud dataset — tackling one of the most challenging real-world ML problems: **extreme class imbalance**.
 
@@ -18,12 +34,10 @@ Credit card fraud causes billions in losses annually. This project builds an end
 ---
 
 ## 🧠 ML Pipeline
-
 ```
 Raw Data → EDA → Preprocessing → SMOTE → Model Training → Evaluation → Streamlit App
 ```
 
-### Key Steps:
 | Step | Details |
 |------|---------|
 | EDA | Class distribution, amount analysis, correlation heatmap |
@@ -38,31 +52,18 @@ Raw Data → EDA → Preprocessing → SMOTE → Model Training → Evaluation �
 
 | Model | Accuracy | ROC-AUC |
 |-------|----------|---------|
-| Logistic Regression | ~97% | ~0.97 |
-| Random Forest | ~99.9% | ~0.99 |
-| XGBoost | ~99.9% | ~0.99 |
+| Logistic Regression | 97.43% | 0.97 |
+| Random Forest | 99.94% | 0.99 |
+| XGBoost | 99.92% | 0.9792 |
 
-> **Note:** ROC-AUC is the primary metric due to class imbalance.
+> **Best Model: XGBoost with ROC-AUC of 0.9792**
 
 ---
 
 ## 🚀 How to Run
-
-### 1. Install dependencies
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn streamlit xgboost imbalanced-learn joblib pillow
-```
-
-### 2. Download dataset
-Download `creditcard.csv` from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) and place it in the project root.
-
-### 3. Train the model
-```bash
 python train.py
-```
-
-### 4. Run the Streamlit app
-```bash
 streamlit run app.py
 ```
 
@@ -71,21 +72,16 @@ streamlit run app.py
 ## 📁 Project Structure
 ```
 fraud-detection/
-├── creditcard.csv          # Dataset (download from Kaggle)
 ├── train.py                # ML pipeline script
-├── fraud_detection.ipynb   # Jupyter notebook (step-by-step)
+├── fraud_detection.ipynb   # Jupyter notebook
 ├── app.py                  # Streamlit web app
-├── model/
-│   ├── best_model.pkl      # Saved best model
-│   └── feature_columns.pkl
-├── plots/                  # Generated visualizations
 └── README.md
 ```
 
 ---
 
 ## 🛠️ Tech Stack
-`Python` · `Pandas` · `NumPy` · `Scikit-learn` · `XGBoost` · `imbalanced-learn (SMOTE)` · `Streamlit` · `Matplotlib` · `Seaborn`
+`Python` · `Pandas` · `NumPy` · `Scikit-learn` · `XGBoost` · `imbalanced-learn` · `SMOTE` · `Streamlit` · `Matplotlib` · `Seaborn`
 
 ---
 
